@@ -1,5 +1,92 @@
 [
   {
+    "id": "dia-6",
+    "date": "2026-09-27",
+    "dayNumber": 6,
+    "title": "Administración de Usuarios y Roles, Seguridad entre Empresas, Motor de Cálculo Fiscal y Pruebas del Sistema",
+    "category": "Seguridad & Administración",
+    "tags": [
+      "Usuarios y Roles",
+      "Seguridad",
+      "Multi-Empresa",
+      "Cálculo Fiscal",
+      "Tasa BCV & IGTF",
+      "Pruebas Automatizadas",
+      "Auditoría"
+    ],
+    "summary": "Nuevo panel para gestionar usuarios y permisos por sede, protección de contraseñas entre empresas del consorcio, simplificación de roles para evitar confusiones operativas, cálculo automático y exacto de facturas en bolívares y dólares, y batería de pruebas para garantizar el correcto funcionamiento del sistema.",
+    "highlights": [
+      "Gestión de Usuarios y Accesos (/admin/usuarios): Pantalla para crear, activar, desactivar y cambiar claves de administradores de empresa y administradores de sede, asegurando que cada persona tenga acceso únicamente a las sucursales que le corresponden",
+      "Protección de Cuentas Compartidas: Sistema de seguridad que detecta si un usuario trabaja en más de una empresa del grupo para evitar que un administrador cambie su clave por error y afecte el acceso en sus otros puestos",
+      "Roles Claros y Simplificados: Depuración de perfiles de usuario dejando únicamente los 4 roles formales (Jefe de Consorcio, Administrador de Empresa, Administrador de Sede y Cajero), facilitando la asignación de permisos sin confusiones",
+      "Detalle Completo de Empresa (/admin/empresas/[id]): Ficha administrativa donde el Jefe de Consorcio puede consultar en un solo lugar todas las sedes, cajas registradoras y personal que opera en cada filial",
+      "Cálculo Fiscal Exacto y Sincronizado: Motor matemático que calcula en tiempo real los totales de la factura (IVA 16%, 8%, exento e IGTF 3%) y convierte montos entre Bolívares y Dólares con la tasa oficial BCV, garantizando que el monto que ve el cajero coincida al centavo con el registro fiscal",
+      "Batería de Pruebas de Calidad (Vitest): Pruebas automáticas que simulan ventas simultáneas, apertura de cajas y cálculo de impuestos para verificar la estabilidad del sistema antes de su puesta en marcha"
+    ],
+    "screenshots": [
+      {
+        "url": "assets/uploads/nexus-admin-usuarios.png",
+        "caption": "Gestión de Usuarios y Roles: Creación y asignación de permisos de acceso con selección de sede física"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-detalle-empresa.png",
+        "caption": "Ficha de Empresa: Detalle de sedes, cajas registradoras, ventas recientes y acceso administrativo directo"
+      },
+      {
+        "url": "assets/uploads/nexus-pos-factura-autopartes.png",
+        "caption": "Terminal de Caja POS: Formulario de venta con cálculo automático de IVA 16%, totalización en Bolívares y Dólares a tasa BCV"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-jefes-consorcio.png",
+        "caption": "Jefes de Consorcio: Panel de control y administración para superadministradores con acceso global"
+      },
+      {
+        "url": "assets/uploads/nexus-consorcio-empresas-lista.png",
+        "caption": "Empresas del Consorcio: Vista general de las empresas activas con resumen de sedes, cajas y ventas"
+      }
+    ]
+  },
+  {
+    "id": "dia-5",
+    "date": "2026-09-26",
+    "dayNumber": 5,
+    "title": "Consorcio Multi-Empresa, Gestión de Sedes y Cajas, Rol ADMIN_SEDE y Automatización BCV",
+    "category": "Multi-Empresa & Administración",
+    "tags": [
+      "Multi-Empresa",
+      "Jefe de Consorcio",
+      "Sedes y Cajas",
+      "ADMIN_SEDE",
+      "RBAC",
+      "pg_cron BCV",
+      "Auditoría Facturas",
+      "UI/UX"
+    ],
+    "summary": "Implementación del panel de administración multi-empresa para el Jefe de Consorcio, conmutador de filiales en tiempo real, gestión jerárquica de sucursales físicas y puntos de emisión con aislamiento estricto (nuevo rol ADMIN_SEDE), sincronización automatizada de la tasa oficial BCV y renovación del listado de facturación.",
+    "highlights": [
+      "Panel de Control Consorcio (Superadmin): Dashboard macro con métricas consolidadas en tiempo real (Ventas de hoy en Bs y USD referencial, acumulado de 7 días, total de empresas, sedes y cajas activas)",
+      "Switcher de Contexto en Caliente: Conmutador desplegable en el header superior para alternar instantáneamente entre empresas del consorcio (PROQUIMICOS, DISTRIBUIDORA CENTRO, etc.) manteniendo activa la sesión y respetando el tenant activo",
+      "Módulo de Sedes y Cajas: Creación y supervisión de sucursales físicas, configuración de cajas con códigos de punto de emisión fiscal (001) y asignación operativa de cajeros",
+      "Nuevo Rol ADMIN_SEDE y Aislamiento Estricto (015_rol_admin_sede.sql): Reforzamiento del esquema RBAC con un rol exclusivo para administradores de sede, confinando la visibilidad y gestión de cajeros, cajas y reportes estrictamente a su sucursal",
+      "Automatización Programada de Tasa BCV (014_cron_tasa_bcv.sql): Cron job a nivel de base de datos para consulta y registro recurrente del tipo de cambio oficial, con badge dinámico en cabecera y botón de refresco",
+      "Rediseño del Listado de Facturación (/documentos): Resumen consolidado de emisión diaria, enlaces directos a correlativos fiscales, trazabilidad por sede, caja y cajero en turno, más botón de Pantalla Completa (F11) para operación continua"
+    ],
+    "screenshots": [
+      {
+        "url": "assets/uploads/nexus-consorcio-empresas-dashboard.png",
+        "caption": "Consorcio Multi-Empresa: Dashboard global con ventas consolidadas en Bs y USD, métricas por empresa y selector de contexto en caliente"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-sedes-cajas.png",
+        "caption": "Administración de Sedes y Cajas: Panel de alta y supervisión de sucursales físicas, puntos de emisión fiscal y cajeros asignados"
+      },
+      {
+        "url": "assets/uploads/nexus-facturas-listado-auditoria.png",
+        "caption": "Listado y Auditoría de Facturación: Trazabilidad de documentos emitidos con desglose por sede, punto de emisión, cajero responsable y totales"
+      }
+    ]
+  },
+  {
     "id": "dia-4",
     "date": "2026-09-23",
     "dayNumber": 4,
