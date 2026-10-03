@@ -1,5 +1,72 @@
 [
   {
+    "id": "dia-7",
+    "date": "2026-10-03",
+    "dayNumber": 7,
+    "title": "Módulo de Galpones e Inventario: Nuevos Roles, Traslados entre Almacenes y Descuento de Stock en Facturación",
+    "category": "Inventario & Logística",
+    "tags": [
+      "Galpones",
+      "Inventario",
+      "Traslados",
+      "ADMIN_GALPON",
+      "TRABAJADOR_GALPON",
+      "RLS",
+      "Importación de Catálogo",
+      "Pruebas Automatizadas"
+    ],
+    "summary": "Construcción completa del módulo de almacenes: dos roles nuevos para operar galpones sin ver precios ni ventas, flujo de traslados entre galpones con aprobación y doble sellado (despacho y llegada), descuento automático de existencia al facturar con bloqueo de venta si no alcanza el stock, importación del catálogo real de productos desde GoNext y una auditoría consolidada de movimientos para el consorcio.",
+    "highlights": [
+      "Dos Roles Nuevos (ADMIN_GALPON y TRABAJADOR_GALPON): Cuentas que solo ven existencias de mercancía, nunca precios ni cifras de venta; el administrador de galpón además aprueba traslados y gestiona a sus trabajadores",
+      "Flujo de Traslados entre Galpones: Un trabajador solicita el envío, el administrador de origen aprueba (descuenta existencia en ese momento), un trabajador sella el despacho físico y el galpón destino sella la llegada anotando lo realmente recibido — si llega menos de lo enviado, la diferencia queda registrada como pérdida y no vuelve a origen",
+      "Bloqueo por Existencia Insuficiente: Ya no se puede solicitar ni aprobar un traslado por más mercancía de la que existe en ese momento en el galpón de origen, con aviso claro en el formulario y una segunda verificación atómica al aprobar por si el stock cambió mientras tanto",
+      "Facturación Conectada al Inventario: Las facturas emitidas desde una sede con galpón asociado descuentan existencia automáticamente y bloquean la venta completa si algún producto no alcanza, evitando vender lo que no hay en físico",
+      "Administración de Sede con Más Peso: El Administrador de Sede ahora también puede gestionar el galpón de su sede y crear o desactivar cuentas de administrador/trabajador de galpón, reflejando que tiene más autoridad operativa que ambos",
+      "Importación del Catálogo Real de GoNext: Más de 20 productos reales (código, descripción, unidad de medida) traídos desde la app GoNext sin tocar ni conectar su base Firebase en ningún momento — exportación manual y carga local",
+      "Auditoría Consolidada (/admin/auditoria): Vista para el consorcio y la empresa con todos los movimientos de inventario de todos los galpones juntos, con filtros por galpón, tipo de movimiento y rango de fechas",
+      "Pulido de Experiencia: Reemplazo de los diálogos nativos del navegador por un modal propio con el estilo de la marca, buscador de productos con autocompletado en la factura, y corrección de un bug donde las cantidades con decimales se mostraban como si fueran miles (ej. \"40.000\" se leía como cuarenta mil en vez de 40 unidades)",
+      "102 Pruebas Automatizadas: Ciclo completo de traslados (solicitar → aprobar → sellar despacho → sellar llegada), permisos por cada paso, bloqueo por falta de stock al solicitar y al aprobar, y descuento de inventario en facturación"
+    ],
+    "screenshots": [
+      {
+        "url": "assets/uploads/nexus-admin-galpones-crear-sede.png",
+        "caption": "Creación de Galpón: el Jefe de Consorcio elige la sede asociada (una sede admite a lo sumo un galpón) o lo deja independiente"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-galpones-empresa.png",
+        "caption": "Gestión de Galpones desde el Administrador de Empresa: mismo panel, mismo alcance de creación y desactivación"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-cajeros.png",
+        "caption": "Gestión de Cajeros: alta de cajero por sede y caja por defecto, con listado filtrable por sede"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-sede-auditoria.png",
+        "caption": "Auditoría de Inventario desde el Administrador de Sede: nuevo permiso para ver los movimientos de su galpón con filtros por tipo y fecha"
+      },
+      {
+        "url": "assets/uploads/nexus-pos-factura-selector.png",
+        "caption": "Terminal de Caja: factura con productos del catálogo GoNext cargados, cada uno descontará existencia del galpón al emitir"
+      },
+      {
+        "url": "assets/uploads/nexus-galpon-admin-aprobar-sellar.png",
+        "caption": "Administrador de Galpón: bandeja de traslados con acciones directas de \"Aprobar\" y \"Sellar despacho\" según el estado"
+      },
+      {
+        "url": "assets/uploads/nexus-galpon-entrada-buscador.png",
+        "caption": "Entrada de Mercancía: buscador de producto con la existencia actual visible antes de registrar la carga"
+      },
+      {
+        "url": "assets/uploads/nexus-galpon-movimientos-completo.png",
+        "caption": "Historial de Movimientos: entradas, ajustes y traslados de salida con motivo, responsable y fecha de cada uno"
+      },
+      {
+        "url": "assets/uploads/nexus-galpon-modal-confirmacion.png",
+        "caption": "Confirmación de Despacho: el diálogo nativo del navegador fue reemplazado por un modal propio con el estilo de la marca"
+      }
+    ]
+  },
+  {
     "id": "dia-6",
     "date": "2026-09-27",
     "dayNumber": 6,
