@@ -14,6 +14,180 @@ const state = {
 
 const FALLBACK_POSTS = [
   {
+    "id": "dia-10",
+    "date": "2026-11-07",
+    "dayNumber": 10,
+    "title": "Tutoriales Guiados para el Personal, Centro de Ayuda y Cobro Rápido en Caja",
+    "category": "Atención al Cliente & Punto de Venta",
+    "tags": [
+      "Punto de Venta (POS)",
+      "Capacitación en Vivo",
+      "Búsqueda Rápida",
+      "Atajos de Teclado",
+      "Pantallas Táctiles"
+    ],
+    "summary": "Se integraron tutoriales interactivos que enseñan a usar el sistema paso a paso según el puesto de trabajo (cajero o administrador), un centro de ayuda con atajos de teclado para agilizar la atención, y un buscador inteligente en caja que sugiere productos al instante sin demoras.",
+    "highlights": [
+      "Capacitación Interactiva por Puesto: El sistema guía en pantalla a cada empleado en su primer inicio de sesión, mostrando únicamente los pasos y funciones que corresponden a su rol.",
+      "Centro de Ayuda y Teclas Rápidas: Botón de asistencia directa con atajos de teclado (como F2 para cliente nuevo o F9 para cobrar) para atender más rápido a los clientes en fila.",
+      "Buscador Inteligente en Caja: La barra de cobro inicia lista para escribir o escanear, sugiriendo coincidencias automáticas de inmediato para no perder tiempo buscando productos.",
+      "Diseño Táctil y Moderno: Nueva imagen visual del sistema y adaptación fluida para trabajar cómodamente en pantallas táctiles de mostrador o computadoras de caja."
+    ],
+    "screenshots": [
+      {
+        "url": "assets/uploads/nexus-tour-interactivo-live.jpg",
+        "caption": "Tutorial Interactivo: Guía en pantalla que capacita al personal paso a paso de forma exclusiva para su función"
+      },
+      {
+        "url": "assets/uploads/nexus-centro-ayuda-atajos.jpg",
+        "caption": "Centro de Ayuda: Panel de consulta rápida con atajos de teclado pensados para acelerar la atención en caja"
+      },
+      {
+        "url": "assets/uploads/nexus-pos-buscador-directo.png",
+        "caption": "Punto de Venta Ágil: Barra de búsqueda lista para escribir o escanear productos con sugerencias instantáneas"
+      }
+    ]
+  },
+  {
+    "id": "dia-9",
+    "date": "2026-11-06",
+    "dayNumber": 9,
+    "title": "Catálogo de Productos, Códigos de Barra Automáticos y Envío de Accesos por Correo",
+    "category": "Gestión de Productos & Seguridad",
+    "tags": [
+      "Catálogo de Productos",
+      "Códigos de Barra",
+      "Control de Inventario",
+      "Envío de Credenciales",
+      "Gestión de Personal"
+    ],
+    "summary": "Se habilitó el módulo central para gestionar todos los productos con cálculo automático de impuestos según la ley, generación de códigos de barra, protección para no borrar productos con ventas o stock, y envío automático de accesos al correo de cada nuevo empleado.",
+    "highlights": [
+      "Panel de Productos y Precios: Vista clara de todos los artículos registrados, productos activos para la venta y control de alícuotas de IVA (general, reducida y exentos).",
+      "Generación Automática de Códigos de Barra: Creación instantánea de códigos estándar listos para escanear con pistolas lectoras en el mostrador o almacén.",
+      "Protección contra Errores de Borrado: El sistema avisa y bloquea la eliminación accidental de un producto si tiene historial de ventas o mercancía en inventario.",
+      "Envío Automático de Usuarios y Claves: Cada vez que se registra un cajero o administrador, el sistema le envía un correo formal de bienvenida con sus credenciales de acceso."
+    ],
+    "screenshots": [
+      {
+        "url": "assets/uploads/nexus-admin-catalogo-quimicos.jpg",
+        "caption": "Catálogo de Productos: Vista central con inventario disponible, precios en tiempo real y cálculo de impuestos"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-productos-crud.jpg",
+        "caption": "Protección de Inventario: Mensaje de confirmación que evita borrar productos con historial o existencia en almacén"
+      },
+      {
+        "url": "assets/uploads/nexus-smtp-email-bienvenida.png",
+        "caption": "Correo de Bienvenida: Notificación formal que recibe el personal con sus datos y contraseña para iniciar sesión"
+      }
+    ]
+  },
+  {
+    "id": "dia-8",
+    "date": "2026-10-24",
+    "dayNumber": 8,
+    "title": "Modo Cajero Protegido, Reimpresión Térmica Bixolon (80mm), Filtros Avanzados por Sede/Fecha e Interfaz Responsive",
+    "category": "Frontend POS & Control Fiscal",
+    "tags": [
+      "Modo Cajero Protegido",
+      "Reimpresión Fiscal",
+      "BIXOLON 80mm",
+      "Libro de Facturas",
+      "Filtros por Fecha",
+      "Responsive UI",
+      "Drawer Móvil",
+      "Seguridad Fiscal"
+    ],
+    "summary": "Implementación del Modo Cajero Protegido con aislamiento estricto antifraude, rediseño completo del libro de ventas (/documentos) con filtros cruzados por sede física y rangos de fechas, soporte optimizado de reimpresión térmica Bixolon según regulaciones del SENIAT y arquitectura de interfaz 100% responsive con navegación móvil.",
+    "highlights": [
+      "Modo Cajero Protegido Antifraude (/documentos): Aislamiento que restringe al cajero a consultar y reimprimir solo el último comprobante de su turno, bloqueando el libro general.",
+      "Libro de Facturas con Filtros Dinámicos: Búsqueda avanzada por sede física y rangos de fechas, con métricas en tiempo real en Bs./USD y trazabilidad de pagos.",
+      "Motor de Reimpresión Fiscal Bixolon (80mm): Formato térmico homologado por el SENIAT con desglose de alícuotas (16%, 8%, exento), RIF receptor, QR y pie de máquina fiscal.",
+      "Interfaz 100% Responsive: Adaptación para tablets y smartphones con drawer táctil (SidebarNav), soporte de pantalla completa (F11) y botones optimizados.",
+      "Estabilización de Producción: Ajuste de suspense boundaries en login, depuración de middlewares de auth y pooler de conexiones PostgreSQL en Supabase."
+    ],
+    "screenshots": [
+      {
+        "url": "assets/uploads/nexus-facturas-listado-auditoria.png",
+        "caption": "Libro de Facturas (/documentos): Auditoría consolidada con correlativo fiscal, desglose por sucursal, caja y montos acumulados"
+      },
+      {
+        "url": "assets/uploads/factura-proquimicos-preview.png",
+        "caption": "Reimpresión Térmica Bixolon (80mm): Vista previa y reimpresión de comprobante fiscal homologado SENIAT con desglose de alícuotas"
+      },
+      {
+        "url": "assets/uploads/nexus-pos-factura-selector.png",
+        "caption": "Terminal POS & Modo Cajero Protegido: Facturación en mostrador con acceso exclusivo a reimpresión de última factura (antifraude / en espera) y pantalla completa (F11)"
+      }
+    ]
+  },
+  {
+    "id": "dia-7",
+    "date": "2026-10-03",
+    "dayNumber": 7,
+    "title": "Módulo de Galpones e Inventario: Nuevos Roles, Traslados entre Almacenes y Descuento de Stock en Facturación",
+    "category": "Inventario & Logística",
+    "tags": [
+      "Galpones",
+      "Inventario",
+      "Traslados",
+      "ADMIN_GALPON",
+      "TRABAJADOR_GALPON",
+      "RLS",
+      "Pruebas Automatizadas"
+    ],
+    "summary": "Construcción completa del módulo de almacenes: dos roles nuevos para operar galpones sin ver precios ni ventas, flujo de traslados entre galpones con aprobación y doble sellado (despacho y llegada), descuento automático de existencia al facturar con bloqueo de venta si no alcanza el stock y una auditoría consolidada de movimientos para el consorcio.",
+    "highlights": [
+      "Dos Roles Nuevos (ADMIN_GALPON y TRABAJADOR_GALPON): Cuentas que solo ven existencias de mercancía, nunca precios ni cifras de venta; el administrador de galpón además aprueba traslados y gestiona a sus trabajadores",
+      "Flujo de Traslados entre Galpones: Un trabajador solicita el envío, el administrador de origen aprueba (descuenta existencia en ese momento), un trabajador sella el despacho físico y el galpón destino sella la llegada anotando lo realmente recibido — si llega menos de lo enviado, la diferencia queda registrada como pérdida y no vuelve a origen",
+      "Bloqueo por Existencia Insuficiente: Ya no se puede solicitar ni aprobar un traslado por más mercancía de la que existe en ese momento en el galpón de origen, con aviso claro en el formulario y una segunda verificación atómica al aprobar por si el stock cambió mientras tanto",
+      "Facturación Conectada al Inventario: Las facturas emitidas desde una sede con galpón asociado descuentan existencia automáticamente y bloquean la venta completa si algún producto no alcanza, evitando vender lo que no hay en físico",
+      "Administración de Sede con Más Peso: El Administrador de Sede ahora también puede gestionar el galpón de su sede y crear o desactivar cuentas de administrador/trabajador de galpón, reflejando que tiene más autoridad operativa que ambos",
+      "Auditoría Consolidada (/admin/auditoria): Vista para el consorcio y la empresa con todos los movimientos de inventario de todos los galpones juntos, con filtros por galpón, tipo de movimiento y rango de fechas",
+      "Pulido de Experiencia: Reemplazo de los diálogos nativos del navegador por un modal propio con el estilo de la marca, buscador de productos con autocompletado en la factura, y corrección de un bug donde las cantidades con decimales se mostraban como si fueran miles (ej. \"40.000\" se leía como cuarenta mil en vez de 40 unidades)",
+      "102 Pruebas Automatizadas: Ciclo completo de traslados (solicitar → aprobar → sellar despacho → sellar llegada), permisos por cada paso, bloqueo por falta de stock al solicitar y al aprobar, y descuento de inventario en facturación"
+    ],
+    "screenshots": [
+      {
+        "url": "assets/uploads/nexus-admin-galpones-crear-sede.png",
+        "caption": "Creación de Galpón: el Jefe de Consorcio elige la sede asociada (una sede admite a lo sumo un galpón) o lo deja independiente"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-galpones-empresa.png",
+        "caption": "Gestión de Galpones desde el Administrador de Empresa: mismo panel, mismo alcance de creación y desactivación"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-cajeros.png",
+        "caption": "Gestión de Cajeros: alta de cajero por sede y caja por defecto, con listado filtrable por sede"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-sede-auditoria.png",
+        "caption": "Auditoría de Inventario desde el Administrador de Sede: nuevo permiso para ver los movimientos de su galpón con filtros por tipo y fecha"
+      },
+      {
+        "url": "assets/uploads/nexus-pos-factura-selector.png",
+        "caption": "Terminal de Caja: factura con productos cargados, cada uno descontará existencia del galpón al emitir"
+      },
+      {
+        "url": "assets/uploads/nexus-galpon-admin-aprobar-sellar.png",
+        "caption": "Administrador de Galpón: bandeja de traslados con acciones directas de \"Aprobar\" y \"Sellar despacho\" según el estado"
+      },
+      {
+        "url": "assets/uploads/nexus-galpon-entrada-buscador.png",
+        "caption": "Entrada de Mercancía: buscador de producto con la existencia actual visible antes de registrar la carga"
+      },
+      {
+        "url": "assets/uploads/nexus-galpon-movimientos-completo.png",
+        "caption": "Historial de Movimientos: entradas, ajustes y traslados de salida con motivo, responsable y fecha de cada uno"
+      },
+      {
+        "url": "assets/uploads/nexus-galpon-modal-confirmacion.png",
+        "caption": "Confirmación de Despacho: el diálogo nativo del navegador fue reemplazado por un modal propio con el estilo de la marca"
+      }
+    ]
+  },
+  {
     "id": "dia-6",
     "date": "2026-09-27",
     "dayNumber": 6,
@@ -116,7 +290,7 @@ const FALLBACK_POSTS = [
       "Atajos de Teclado",
       "Multimoneda & IGTF"
     ],
-    "summary": "Optimización integral de la interfaz del cajero para agilizar la facturación en punto de venta, diseño de plantilla de ticket fiscal según normativas SENIAT e integración directa con impresoras fiscales BIXOLON (modelos SRP-350 y SRP-812).",
+    "summary": "Optimización integral de la interfaz del cajero para agilizar la facturación en punto de venta, diseño de plantilla de ticket fiscal según normativas SENIAT e integración directa con impresoras fiscales BIXOLON.",
     "highlights": [
       "Terminal de Caja Optimizado (POS): Nueva vista ágil para cajero con atajos de teclado rápidos (F2 Nuevo Cliente, F3 Agregar Producto, F9 Procesar Pago) diseñada para alto volumen de despacho",
       "Modal de Cobro y Liquidación Rápida: Flujo en dos pasos con cálculo automático en Bolívares y Divisas (Tasa BCV en vivo), soporte para Punto/Débito, Pago Móvil, Transferencia, Efectivo y recargo IGTF (+3%)",
@@ -305,7 +479,7 @@ function updateStats() {
 function renderPosts() {
   const filtered = state.posts.filter(post => {
     const matchesTag = state.currentTag === 'all' || (post.tags && post.tags.includes(state.currentTag));
-    
+
     const query = state.searchQuery.toLowerCase().trim();
     if (!query) return matchesTag;
 
@@ -328,14 +502,14 @@ function renderPosts() {
   postsContainer.className = state.viewMode === 'grid' ? 'grid-view' : 'timeline-view';
 
   postsContainer.innerHTML = filtered.map(post => {
-    const highlightsHtml = post.highlights && post.highlights.length > 0 ? 
+    const highlightsHtml = post.highlights && post.highlights.length > 0 ?
       '<div class="highlights-block"><div class="highlights-title"><i class="fa-solid fa-list-check"></i> Logros & Tareas Realizadas</div><ul class="highlights-list">' +
       post.highlights.map(item => '<li><i class="fa-solid fa-check"></i> <span>' + item + '</span></li>').join('') +
       '</ul></div>' : '';
 
-    const screenshotsHtml = post.screenshots && post.screenshots.length > 0 ? 
+    const screenshotsHtml = post.screenshots && post.screenshots.length > 0 ?
       '<div class="gallery-block"><div class="gallery-grid">' +
-      post.screenshots.map((ss, idx) => 
+      post.screenshots.map((ss, idx) =>
         '<div class="screenshot-card" data-post-id="' + post.id + '" data-ss-index="' + idx + '">' +
         '<img src="' + ss.url + '" alt="' + (ss.caption || 'Captura de pantalla') + '" loading="lazy" onerror="this.src=\'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80\'">' +
         '<div class="screenshot-overlay">' +
@@ -348,19 +522,19 @@ function renderPosts() {
     return '<article class="timeline-item" id="post-' + post.id + '">' +
       '<div class="timeline-node"></div>' +
       '<div class="post-card">' +
-        '<header class="post-header">' +
-          '<div class="post-meta-left">' +
-            '<span class="day-badge">AVANCE #' + (post.dayNumber || 0) + '</span>' +
-            '<span class="date-text"><i class="fa-regular fa-calendar"></i> ' + formatDate(post.date) + '</span>' +
-            (post.category ? '<span class="post-category">' + post.category + '</span>' : '') +
-          '</div>' +
-        '</header>' +
-        '<h2 class="post-title">' + post.title + '</h2>' +
-        '<p class="post-summary">' + post.summary + '</p>' +
-        highlightsHtml +
-        screenshotsHtml +
+      '<header class="post-header">' +
+      '<div class="post-meta-left">' +
+      '<span class="day-badge">AVANCE #' + (post.dayNumber || 0) + '</span>' +
+      '<span class="date-text"><i class="fa-regular fa-calendar"></i> ' + formatDate(post.date) + '</span>' +
+      (post.category ? '<span class="post-category">' + post.category + '</span>' : '') +
       '</div>' +
-    '</article>';
+      '</header>' +
+      '<h2 class="post-title">' + post.title + '</h2>' +
+      '<p class="post-summary">' + post.summary + '</p>' +
+      highlightsHtml +
+      screenshotsHtml +
+      '</div>' +
+      '</article>';
   }).join('');
 
   attachScreenshotEvents();
@@ -403,7 +577,7 @@ function updateLightboxImage() {
   if (!current) return;
   lightboxImg.src = current.url;
   lightboxCaption.textContent = current.caption || ('Captura ' + (state.currentLightboxIndex + 1) + ' de ' + state.lightboxImages.length);
-  
+
   lightboxPrevBtn.style.display = state.lightboxImages.length > 1 ? 'flex' : 'none';
   lightboxNextBtn.style.display = state.lightboxImages.length > 1 ? 'flex' : 'none';
 }

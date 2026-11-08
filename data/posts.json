@@ -1,5 +1,114 @@
 [
   {
+    "id": "dia-10",
+    "date": "2026-11-07",
+    "dayNumber": 10,
+    "title": "Tutoriales Guiados para el Personal, Centro de Ayuda y Cobro Rápido en Caja",
+    "category": "Atención al Cliente & Punto de Venta",
+    "tags": [
+      "Punto de Venta (POS)",
+      "Capacitación en Vivo",
+      "Búsqueda Rápida",
+      "Atajos de Teclado",
+      "Pantallas Táctiles"
+    ],
+    "summary": "Se integraron tutoriales interactivos que enseñan a usar el sistema paso a paso según el puesto de trabajo (cajero o administrador), un centro de ayuda con atajos de teclado para agilizar la atención, y un buscador inteligente en caja que sugiere productos al instante sin demoras.",
+    "highlights": [
+      "Capacitación Interactiva por Puesto: El sistema guía en pantalla a cada empleado en su primer inicio de sesión, mostrando únicamente los pasos y funciones que corresponden a su rol.",
+      "Centro de Ayuda y Teclas Rápidas: Botón de asistencia directa con atajos de teclado (como F2 para cliente nuevo o F9 para cobrar) para atender más rápido a los clientes en fila.",
+      "Buscador Inteligente en Caja: La barra de cobro inicia lista para escribir o escanear, sugiriendo coincidencias automáticas de inmediato para no perder tiempo buscando productos.",
+      "Diseño Táctil y Moderno: Nueva imagen visual del sistema y adaptación fluida para trabajar cómodamente en pantallas táctiles de mostrador o computadoras de caja."
+    ],
+    "screenshots": [
+      {
+        "url": "assets/uploads/nexus-tour-interactivo-live.jpg",
+        "caption": "Tutorial Interactivo: Guía en pantalla que capacita al personal paso a paso de forma exclusiva para su función"
+      },
+      {
+        "url": "assets/uploads/nexus-centro-ayuda-atajos.jpg",
+        "caption": "Centro de Ayuda: Panel de consulta rápida con atajos de teclado pensados para acelerar la atención en caja"
+      },
+      {
+        "url": "assets/uploads/nexus-pos-buscador-directo.png",
+        "caption": "Punto de Venta Ágil: Barra de búsqueda lista para escribir o escanear productos con sugerencias instantáneas"
+      }
+    ]
+  },
+  {
+    "id": "dia-9",
+    "date": "2026-11-06",
+    "dayNumber": 9,
+    "title": "Catálogo de Productos, Códigos de Barra Automáticos y Envío de Accesos por Correo",
+    "category": "Gestión de Productos & Seguridad",
+    "tags": [
+      "Catálogo de Productos",
+      "Códigos de Barra",
+      "Control de Inventario",
+      "Envío de Credenciales",
+      "Gestión de Personal"
+    ],
+    "summary": "Se habilitó el módulo central para gestionar todos los productos con cálculo automático de impuestos según la ley, generación de códigos de barra, protección para no borrar productos con ventas o stock, y envío automático de accesos al correo de cada nuevo empleado.",
+    "highlights": [
+      "Panel de Productos y Precios: Vista clara de todos los artículos registrados, productos activos para la venta y control de alícuotas de IVA (general, reducida y exentos).",
+      "Generación Automática de Códigos de Barra: Creación instantánea de códigos estándar listos para escanear con pistolas lectoras en el mostrador o almacén.",
+      "Protección contra Errores de Borrado: El sistema avisa y bloquea la eliminación accidental de un producto si tiene historial de ventas o mercancía en inventario.",
+      "Envío Automático de Usuarios y Claves: Cada vez que se registra un cajero o administrador, el sistema le envía un correo formal de bienvenida con sus credenciales de acceso."
+    ],
+    "screenshots": [
+      {
+        "url": "assets/uploads/nexus-admin-catalogo-quimicos.jpg",
+        "caption": "Catálogo de Productos: Vista central con inventario disponible, precios en tiempo real y cálculo de impuestos"
+      },
+      {
+        "url": "assets/uploads/nexus-admin-productos-crud.jpg",
+        "caption": "Protección de Inventario: Mensaje de confirmación que evita borrar productos con historial o existencia en almacén"
+      },
+      {
+        "url": "assets/uploads/nexus-smtp-email-bienvenida.png",
+        "caption": "Correo de Bienvenida: Notificación formal que recibe el personal con sus datos y contraseña para iniciar sesión"
+      }
+    ]
+  },
+  {
+    "id": "dia-8",
+    "date": "2026-10-24",
+    "dayNumber": 8,
+    "title": "Modo Cajero Protegido, Reimpresión Térmica Bixolon (80mm), Filtros Avanzados por Sede/Fecha e Interfaz Responsive",
+    "category": "Frontend POS & Control Fiscal",
+    "tags": [
+      "Modo Cajero Protegido",
+      "Reimpresión Fiscal",
+      "BIXOLON 80mm",
+      "Libro de Facturas",
+      "Filtros por Fecha",
+      "Responsive UI",
+      "Drawer Móvil",
+      "Seguridad Fiscal"
+    ],
+    "summary": "Implementación del Modo Cajero Protegido con aislamiento estricto antifraude, rediseño completo del libro de ventas (/documentos) con filtros cruzados por sede física y rangos de fechas, soporte optimizado de reimpresión térmica Bixolon según regulaciones del SENIAT y arquitectura de interfaz 100% responsive con navegación móvil.",
+    "highlights": [
+      "Modo Cajero Protegido Antifraude (/documentos): Aislamiento que restringe al cajero a consultar y reimprimir solo el último comprobante de su turno, bloqueando el libro general.",
+      "Libro de Facturas con Filtros Dinámicos: Búsqueda avanzada por sede física y rangos de fechas, con métricas en tiempo real en Bs./USD y trazabilidad de pagos.",
+      "Motor de Reimpresión Fiscal Bixolon (80mm): Formato térmico homologado por el SENIAT con desglose de alícuotas (16%, 8%, exento), RIF receptor, QR y pie de máquina fiscal.",
+      "Interfaz 100% Responsive: Adaptación para tablets y smartphones con drawer táctil (SidebarNav), soporte de pantalla completa (F11) y botones optimizados.",
+      "Estabilización de Producción: Ajuste de suspense boundaries en login, depuración de middlewares de auth y pooler de conexiones PostgreSQL en Supabase."
+    ],
+    "screenshots": [
+      {
+        "url": "assets/uploads/nexus-facturas-listado-auditoria.png",
+        "caption": "Libro de Facturas (/documentos): Auditoría consolidada con correlativo fiscal, desglose por sucursal, caja y montos acumulados"
+      },
+      {
+        "url": "assets/uploads/factura-proquimicos-preview.png",
+        "caption": "Reimpresión Térmica Bixolon (80mm): Vista previa y reimpresión de comprobante fiscal homologado SENIAT con desglose de alícuotas"
+      },
+      {
+        "url": "assets/uploads/nexus-pos-factura-selector.png",
+        "caption": "Terminal POS & Modo Cajero Protegido: Facturación en mostrador con acceso exclusivo a reimpresión de última factura (antifraude / en espera) y pantalla completa (F11)"
+      }
+    ]
+  },
+  {
     "id": "dia-7",
     "date": "2026-10-03",
     "dayNumber": 7,
